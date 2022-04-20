@@ -5,6 +5,7 @@ import { useLocation } from "react-router-dom";
 import style from '../../css/hamburger.module.css'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Projects from '../Projects';
 function Links({ name, path }) {
   const location = useLocation();
 
@@ -19,6 +20,42 @@ function Links({ name, path }) {
   )
 }
 function Header() {
+  const vals = [
+    {
+      name: "HTMl,CSS,JS",
+      projectname: "Basic Responsive Website",
+      DriveLink: "/learn/html",
+    },
+    {
+      name: "React",
+      projectname: "Basic Responsive Website Using HTML,CSS,JS",
+      DriveLink: "/indi/react"
+    },
+    {
+      name: "Flutter",
+      projectname: "Instagram Clone Using Flutter",
+      DriveLink: "/indi/flutter"
+    }
+
+  ]
+  const vals1 = [
+    {
+      name: "HTMl,CSS,JS",
+      projectname: "Basic Responsive Website",
+      DriveLink: "/learn/html",
+    },
+    {
+      name: "React",
+      projectname: "Basic Responsive Website Using HTML,CSS,JS",
+      DriveLink: "/indi/react"
+    },
+    {
+      name: "Flutter",
+      projectname: "Instagram Clone Using Flutter",
+      DriveLink: "/indi/flutter"
+    }
+
+  ]
   const [hamburger, sethamburger] = useState(false);
   const [hamburger2, sethamburger2] = useState(false);
   const location = useLocation();
@@ -53,7 +90,7 @@ function Header() {
           <div className="pl-4 p-1 mt-2 text-sm text-[#8899A8]">LEARNING</div>
           <Links name="Design" path="learn/design" />
           <Links name="Website" path="learn/website" />
-          <Links name="Apps" path="leanr/apps" />
+          <Links name="Apps" path="learn/apps" />
           <hr></hr>
           <div className='pl-4 mt-2 p-1 text-sm text-[#8899A8] '>ABOUT</div>
           <Links name="Team" path="about/team" />
@@ -61,7 +98,7 @@ function Header() {
           <hr></hr>
           <div className='pl-4 mt-2 p-1 text-sm text-[#8899A8]'>SUGGESTIONS</div>
           <Links name="Feedback" path="suggest/feedback" />
-          <Links name="Complaints" path="suggest/complaints" />
+          <Links name="Complaints" path="suggest/suggestions" />
         </div>
       </div>
       {/* mobile version */}
@@ -131,35 +168,13 @@ function Header() {
           ""
         )}
         {hamburger2 ? (
-          <div className=' fixed h-[100vh]  z-30 top-0 right-0 bg-[#F5F7F9] overflow-y-scroll w-[80vw]' onClick={() => sethamburger2((prev) => !prev)}
+          <div className='fixed top-0 z-30 bg-[#F5F7F9] overflow-y-scroll w-[80vw] h-[100vh] m-0 right-0' onClick={() => sethamburger2((prev) => !prev)}
           data-aos="fade-left"
-          data-aos-duration="4"
-            >
-          <div className='pl-6 relative  top-[10vh] lg:pl-12'>
-          <Link to='/'><div className={`p-2 pl-4 mb-2  ${splitLocation[1] === "" ? "text-white bg-black font-bold rounded-md" : "text-[#5C6975]"}  hover:text-black rounded-md hover:text-white hover:bg-black hover:font-bold`}>Introduction</div></Link>
-          <hr></hr>
-          <div className="p-2 pl-4 text-sm text-[#8899A8]">SDC LAUNCHES</div>
-          <Links name="Elections Portal" path="sdc/election" />
-          <Links name="LCS Forum" path="sdc/lcs" />
-          <Links name="Placement Portal" path="sdc/placement" />
-          <hr></hr>
-          <div className="pl-4 p-1 mt-2 text-sm text-[#8899A8]">PROJECTS</div>
-          <Links name="Design" path="proj/design" />
-          <Links name="Website" path="proj/website" />
-          <Links name="Apps" path="proj/app" />
-          <div className="pl-4 p-1 mt-2 text-sm text-[#8899A8]">LEARNING</div>
-          <Links name="Design" path="learn/design" />
-          <Links name="Website" path="learn/website" />
-          <Links name="Apps" path="leanr/apps" />
-          <hr></hr>
-          <div className='pl-4 mt-2 p-1 text-sm text-[#8899A8] '>ABOUT</div>
-          <Links name="Team" path="about/team" />
-          <Links name="Contact" path="about/contact" />
-          <hr></hr>
-          <div className='pl-4 mt-2 p-1 text-sm text-[#8899A8]'>SUGGESTIONS</div>
-          <Links name="Feedback" path="suggest/feedback" />
-          <Links name="Complaints" path="suggest/complaints" />
-        </div>
+          data-aos-offset="400"
+          data-aos-duration="4000">
+          <div className='relative top-[13vh]'>
+          <Projects vals={vals} vals1 ={vals1}  />
+          </div>
           </div>
         ) : (
           ""
