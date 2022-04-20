@@ -128,14 +128,38 @@ function App() {
           <Header />
         <div className=' md:relative no-scrollbar lg:px-16 px-8 h-[100vh] overflow-y-scroll'>
           <Routes>
-            <Route path="/" element={<Intro />} />
-            {/* <Route path="/learn/website" element={} /> */}
-            <Route path="/learn/website/:id" element={<ProjectsData name={vals[0].projectname} DriveLink={vals[0].DriveLink} />} />
+          <Route index element={<Intro />} />
+            <Route path="learn" element={<Learn/>}>
+              <Route path="design" element={<Design/>}/>
+              <Route path="website" element={<Website/>}/>
+              <Route path="apps" element={<Apps/>}/>
+              <Route path="design/:id" element={<ProjectsData data={vals} />} />
+              <Route path="website/:id" element={<ProjectsData data={vals} />} />
+              <Route path="app/:id" element={<ProjectsData data={vals} />} />
+            </Route>
+            <Route path="proj" element={<Proj />}>
+            <Route path="design" element={<Design1/>}/>
+              <Route path="website" element={<Website1/>}/>
+              <Route path="app" element={<Apps1/>}/>
+              <Route path="design/:id" element={<ProjectsData data={vals} />} />
+              <Route path="website/:id" element={<ProjectsData data={vals} />} />
+              <Route path="app/:id" element={<ProjectsData data={vals} />}/>
+            </Route>
+            <Route path="sdc" element={<Navigate to="/sdc/elections"/>}>
+              <Route path="election" element={<ElectionsPortal/>} />
+              <Route path="lcs" element={<LCSForum/>} />
+              <Route path="placement" element={<PlacementPortal/>} />
+            </Route>
+            <Route path="about" element={<About/>}>
+              <Route path="team" element={<Team/>} />
+              <Route path="contact" element={<Contact/>} />
+            </Route>
+            <Route path="suggest" element={<Suggest />}>
+              <Route path="feedback" element={<Feedback/>} />
+              <Route path="suggestions" element={<Suggestions/>} />
+            </Route>
+            <Route path="*" element={<Team/>}/>
           </Routes>
-        </div>
-        <div className='hidden cursor-pointer w-[200px]  lg:min-w-[300px]'>
-          <div className='text-center text-[#8899A8] hover:text-black border-y-2 p-4 m-10'>Search</div>
-          <Projects vals={vals} vals1={vals1}  />
         </div>
       </div>
     </Router>
