@@ -33,16 +33,19 @@ import Apps1 from './Pages/Projects/Apps';
 function App() {
   const vals = [
     {
+      id:"html",
       name: "HTMl,CSS,JS",
       projectname: "Basic Responsive Website",
       DriveLink: "/learn/html",
     },
     {
+      id:"html1",
       name: "React",
       projectname: "Basic Responsive Website Using HTML,CSS,JS",
       DriveLink: "/indi/react"
     },
     {
+      id:"html2",
       name: "Flutter",
       projectname: "Instagram Clone Using Flutter",
       DriveLink: "/indi/flutter"
@@ -51,7 +54,7 @@ function App() {
   ]
   const vals1 = [
     {
-      name: "HTMl,CSS,J",
+      name: "HTMl,CSS,JS",
       projectname: "Basic Responsive Website",
       DriveLink: "/learn/html",
     },
@@ -72,11 +75,7 @@ function App() {
       <div className='hidden md:flex md:flex-row'>
         <div className='flex-none h-[100vh] '>
           <Header />
-         
         </div >
-      
-
-
 
         <div className='flex-auto no-scrollbar lg:px-16 px-8 h-[100vh] overflow-y-scroll'>
           <Routes>

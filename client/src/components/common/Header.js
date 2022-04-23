@@ -70,13 +70,13 @@ function Header() {
   const splitLocation = pathname.split("/");
   return (
     <>
-      <div className='hidden md:block border-r-2 no-scrollbar bg-[#F5F7F9] cursor-pointer h-[100vh] w-[200px] lg:w-[300px] overflow-y-scroll max-w-[300px]'>
-        <div className='logo mx-auto w-fit align-center py-2 '>
-          <Link to="/"><img src={Logo} className='w-[70px] inline-block'></img></Link>
+      <div className='hidden md:block border-r-2 no-scrollbar bg-[#F1F2F5] cursor-pointer h-[100vh] w-[200px] lg:w-[300px] overflow-y-scroll max-w-[300px]'>
+        <div className='logo mx-auto w-fit align-center relative top-4 my-4 mb-6 '>
+          <Link to="/"><img src={Logo} className='w-[100px] inline-block'></img></Link>
         </div>
         <br />
-        <div className='pl-6 lg:pl-12'>
-          <Link to='/'><div className={`p-2 pl-4 mb-2  ${splitLocation[1] === "" ? "text-white bg-black font-bold rounded-md" : "text-[#5C6975]"}  hover:text-black rounded-md hover:text-white hover:bg-black hover:font-bold`}>Introduction</div></Link>
+        <div className='  relative pl-6 lg:pl-12'>
+          <Link to='/'><div className={`p-2 pl-4 mb-2  ${splitLocation[1] === "" ? "text-white bg-black font-bold rounded-md" : "text-[#56585C]"}  hover:text-black rounded-md hover:text-white hover:bg-black hover:font-bold`}>Introduction</div></Link>
           <hr></hr>
           <div className="p-2 pl-4 text-sm text-[#8899A8]">SDC LAUNCHES</div>
           <Links name="Elections Portal" path="sdc/election" />
