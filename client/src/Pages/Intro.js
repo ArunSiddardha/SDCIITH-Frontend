@@ -5,8 +5,8 @@ function Intro() {
   return (
   
       <div className='  relative'>
-    <div className='lg:text-5xl text-2xl border-b-4  text-[#3B454E] h-fit cursor-pointer py-5 mb-5 mt-2 md:my-5 font-bold'>Student Dev Commitee</div>
-    <div className='text-2xl lg:text-3xl text-[#3B454E] font-bold my-5'>Welcome to the SDC</div>
+    <div className='lg:text-5xl text-2xl border-b-4  text-[#3B454E] h-fit cursor-pointer py-5 mb-5 mt-2 md:my-5 font-bold'>Welcome to the SDC</div>
+    <div className='text-2xl lg:text-3xl text-[#3B454E] font-bold my-5'>Introduction to SDC</div>
     <ul className='text-md text-[#3B454E]'>        
             Welcome to the SDC. Here we are a group of developers who work around the clock to design,develope,deploy ,direct Websites, Apps and Products.And here we give students a hands on experience for desiging,developing, managing products .By Giving the Right Mentorship and relevant Resources for the same
             which are in need for institute, Clubs, Informal associations, Fests.    
