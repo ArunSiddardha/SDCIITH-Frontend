@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import {  Link } from 'react-router-dom'
 import { useLocation } from "react-router-dom";
 function Links({name,link}){
   const location = useLocation();

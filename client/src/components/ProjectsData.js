@@ -1,8 +1,7 @@
 import React from 'react'
-import { useLocation, useParams } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 function ProjectsData({data}) {
-  const { projId } = useParams();
   const location = useLocation();
     const { pathname } = location;
     const splitLocation = pathname.split("/");

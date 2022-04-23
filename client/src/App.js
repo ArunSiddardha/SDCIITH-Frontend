@@ -1,16 +1,14 @@
-import logo from './logo.svg';
+
 import './App.css';
 import {
   Routes,
   Route,
   BrowserRouter as Router,
   Navigate,
-  useLocation,
-  Outlet,
+
 } from "react-router-dom";
 import Header from './components/common/Header';
 import Intro from './Pages/Intro';
-import { Link } from 'react-router-dom'
 import ProjectsData from './components/ProjectsData';
 import Projects from './components/Projects';
 import ElectionsPortal from './Pages/SDCLaunces/ElectionsPortal';
@@ -52,24 +50,24 @@ function App() {
     }
 
   ]
-  const vals1 = [
-    {
-      name: "HTMl,CSS,JS",
-      projectname: "Basic Responsive Website",
-      DriveLink: "/learn/html",
-    },
-    {
-      name: "Reac",
-      projectname: "Basic Responsive Website Using HTML,CSS,JS",
-      DriveLink: "/indi/react"
-    },
-    {
-      name: "Flutte",
-      projectname: "Instagram Clone Using Flutter",
-      DriveLink: "/indi/flutter"
-    }
+  // const vals1 = [
+  //   {
+  //     name: "HTMl,CSS,JS",
+  //     projectname: "Basic Responsive Website",
+  //     DriveLink: "/learn/html",
+  //   },
+  //   {
+  //     name: "Reac",
+  //     projectname: "Basic Responsive Website Using HTML,CSS,JS",
+  //     DriveLink: "/indi/react"
+  //   },
+  //   {
+  //     name: "Flutte",
+  //     projectname: "Instagram Clone Using Flutter",
+  //     DriveLink: "/indi/flutter"
+  //   }
 
-  ]
+  // ]
   return (
     <Router basename='/'>
       <div className='hidden md:flex md:flex-row'>

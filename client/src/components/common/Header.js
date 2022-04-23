@@ -16,7 +16,7 @@ function Links({ name, path }) {
   const splitLocation = pathname.split("/");
   const paths = path.split("/")
   return (
-    <Link to={path}><div className={`pb-2 pt-2 pl-4 ml-3 text-sm ${splitLocation[1] === paths[0] && splitLocation[2] == paths[1] ? "text-white bg-black font-bold rounded-md" : "text-[#5C6975]"}  border-black-600 hover:font-bold  hover:rounded-md hover:text-white hover:bg-black`}>{name}</div></Link>
+    <Link to={path}><div className={`pb-2 pt-2 pl-4 ml-3 text-sm ${splitLocation[1] === paths[0] && splitLocation[2] === paths[1] ? "text-white bg-black font-bold rounded-md" : "text-[#5C6975]"}  border-black-600 hover:font-bold  hover:rounded-md hover:text-white hover:bg-black`}>{name}</div></Link>
   )
 }
 function Header() {
