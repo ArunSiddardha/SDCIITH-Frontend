@@ -22,13 +22,19 @@ function Intro() {
     <div className='text-2xl lg:text-3xl text-[#3B454E] font-bold my-5'>Our Culture</div>
     <ul className='text-md text-[#3B454E]'>
     <li >
-           We will be working on projects in an organised manner . With a proper hirerchial team structure with a immese amout of learning from ur peers
+           We will be working on projects in an organised manner . With a proper hirerchial team structure with a immese amout of learning,management skills from ur peers
          </li>
     </ul>
     <div className='text-2xl lg:text-3xl text-[#3B454E] font-bold my-5'>What will you learn?</div>
     <ul className='text-md text-[#3B454E]'>
     <li >
            Apart from learning the skills. u will get to know how a team works how to lead and manage a team with an actual real life project. And u will get to know many people who will be mentoring u . And u will get to know the crucial things that are important for u from ur fellow mentors by this way we establish a community culture in our dev community.
+         </li>
+    </ul>
+    <div className='text-2xl lg:text-3xl text-[#3B454E] font-bold my-5'>Join Our Discord Server</div>
+    <ul className='text-md text-[#3B454E]'>
+    <li >
+           
          </li>
     </ul>
     <iframe src={link} title="1" className='w-5/6 h-[50vh] mx-auto lg:h-[120vh]' allow="autoplay"></iframe>
