@@ -6,6 +6,7 @@ import style from '../../css/hamburger.module.css'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Projects from '../Projects';
+import Logo1 from '../../images/Brand1.png'
 function Links({ name, path }) {
   const location = useLocation();
 
@@ -72,7 +73,7 @@ function Header() {
     <>
       <div className='hidden md:block border-r-2 no-scrollbar bg-[#F1F2F5] cursor-pointer h-[100vh] w-[200px] lg:w-[300px] overflow-y-scroll max-w-[300px]'>
         <div className='logo mx-auto w-fit align-center relative top-4 my-4 mb-6 '>
-          <Link to="/"><img src={Logo} className='w-[100px] inline-block'></img></Link>
+          <Link to="/"><img src={Logo} className='w-[140px] lg:w-[210px] inline-block'></img></Link>
         </div>
         <br />
         <div className='  relative pl-6 lg:pl-12'>
@@ -117,7 +118,9 @@ function Header() {
             <span className={style.span1}></span>
             <span className={style.span1}></span>
           </div>
-          <div className='font-bold text-3xl text-center'>SDC</div>
+          <div className='logo mx-auto w-fit align-center relative top-4  mb-6 '>
+          <Link to="/"><img src={Logo1} className='h-[7vh] inline-block'></img></Link>
+        </div>
           <div
             className={
               hamburger2

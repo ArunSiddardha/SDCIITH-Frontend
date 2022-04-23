@@ -14,7 +14,7 @@ function Intro() {
     <div className='text-2xl lg:text-3xl text-[#3B454E] font-bold my-5'>Our Aim</div>
     <ul className='text-md text-[#3B454E]'>
     <li >
-            Our Aim for forming this commitee is to give the students a hands on experience for desiging,developing, managing websites, Apps and Products. With Giving the Right Mentorship and relevant Resources
+            Our Aim for forming this commitee is to give the students a hands on experience for desiging,developing, managing websites, Apps and Products and establish a development culture in campus. With Giving the Right Mentorship and relevant Resources
             To design,develope,deploy cool Apps, websites and products which are in need for institute, Clubs, Informal associations, Fests. 
 
          </li>
