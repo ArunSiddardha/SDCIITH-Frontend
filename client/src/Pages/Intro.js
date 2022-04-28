@@ -5,8 +5,8 @@ function Intro() {
   return (
   
       <div className='  relative'>
-    <div className='lg:text-5xl text-2xl border-b-4  text-[#3B454E] h-fit cursor-pointer py-5 mb-5 mt-2 md:my-5 font-bold'>Welcome to the SDC</div>
-    <div className='text-2xl lg:text-3xl text-[#3B454E] font-bold my-5'>Introduction to SDC</div>
+    <div className='lg:text-5xl text-2xl border-b-4  text-[#3B454E] h-fit cursor-pointer py-5 mb-5 mt-2 md:my-8 font-bold'>Welcome to the SDC</div>
+    <div className='text-2xl lg:text-3xl text-[#3B454E] font-bold my-5 '>Introduction to SDC</div>
     <ul className='text-md text-[#3B454E]'>        
             Welcome to the SDC. Here we are a group of developers who work around the clock to design,develope,deploy ,direct Websites, Apps and Products.And here we give students a hands on experience for desiging,developing, managing products .By Giving the Right Mentorship and relevant Resources for the same
             which are in need for institute, Clubs, Informal associations, Fests.    
@@ -32,12 +32,13 @@ function Intro() {
          </li>
     </ul>
     <div className='text-2xl lg:text-3xl text-[#3B454E] font-bold my-5'>Join Our Discord Server</div>
-    <ul className='text-md text-[#3B454E]'>
-    <li >
-           
-         </li>
-    </ul>
-    <iframe src={link} title="1" className='w-5/6 h-[50vh] mx-auto lg:h-[120vh]' allow="autoplay"></iframe>
+    <div className='text-[#3B454E]'>We use discord as our discussion forum where we mentor and clarify doubts regarding the study projects. And for assigned the SDC projects to the people. </div>
+    <a href='https://gymkhana.iith.ac.in/index.html'>
+      
+   <div className='flex justify-center font-[900] cursor-pointer text-[1.2rem] text-white hover:bg-[#3B454E] items-center h-[70px] rounded-lg hover:border-2 hover:border-black bg-[#7289da] m-3'>
+   Join Our Discord by clicking here 
+   </div></a>
+    {/* <iframe src={link} title="1" className='w-5/6 h-[50vh] mx-auto lg:h-[120vh]' allow="autoplay"></iframe> */}
     
     </div>
    
