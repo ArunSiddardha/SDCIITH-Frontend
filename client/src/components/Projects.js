@@ -1,68 +1,54 @@
 import React from 'react'
-import {  Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useLocation } from "react-router-dom";
-function Links({name,link}){
+
+function Projects({ vals ,learnapps}) {
   const location = useLocation();
-
-    //destructuring pathname from location
-    const { pathname } = location;
-
-    //Javascript split method to get the name of the path in array
-    const splitLocation = pathname.split("/");
-    return(<div className={`col-span-1 ${splitLocation[3]==="html"?"text-[#0EA5E9] font-bold":"text-[#8899A8]"} hover:font-bold hover:text-[#0EA5E9]`} ><Link to={link}>{name}</Link></div>)
-}
-function Projects({vals,vals1}) {
-    const location = useLocation();
-    const { pathname } = location;
-    const splitLocation = pathname.split("/");
-    console.log(splitLocation)
-    if(splitLocation[1] === "learn")
-    {
+  const { pathname } = location;
+  const splitLocation = pathname.split("/");
+  if (splitLocation[1] === "learn") {
+    if (splitLocation[2] === "website") {
       return (
-   
-        <div className='right-0 grid grid-cols-1 text-center gap-2'>
-           <Links name="Html, Css, Js" link="/learn/website/html"/>
-           <div className='col-span-1 text-[#8899A8] '><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <div className='col-span-1 text-[#8899A8] hover:text-black'><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <div className='col-span-1 text-[#8899A8] hover:text-black'><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <div className='col-span-1 text-[#8899A8] hover:text-black'><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <Links name="Html, Css, Js" link="/learn/website/html"/>
-           <div className='col-span-1 text-[#8899A8] '><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <div className='col-span-1 text-[#8899A8] hover:text-black'><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <div className='col-span-1 text-[#8899A8] hover:text-black'><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <div className='col-span-1 text-[#8899A8] hover:text-black'><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <Links name="Html, Css, Js" link="/learn/website/html"/>
-           <div className='col-span-1 text-[#8899A8] '><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <div className='col-span-1 text-[#8899A8] hover:text-black'><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <div className='col-span-1 text-[#8899A8] hover:text-black'><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <div className='col-span-1 text-[#8899A8] hover:text-black'><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <Links name="Html, Css, Js" link="/learn/website/html"/>
-           <div className='col-span-1 text-[#8899A8] '><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <div className='col-span-1 text-[#8899A8] hover:text-black'><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <div className='col-span-1 text-[#8899A8] hover:text-black'><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <div className='col-span-1 text-[#8899A8] hover:text-black'><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <Links name="Html, Css, Js" link="/learn/website/html"/>
-           <div className='col-span-1 text-[#8899A8] '><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <div className='col-span-1 text-[#8899A8] hover:text-black'><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <div className='col-span-1 text-[#8899A8] hover:text-black'><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <div className='col-span-1 text-[#8899A8] hover:text-black'><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <Links name="Html, Css, Js" link="/learn/website/html"/>
-           <div className='col-span-1 text-[#8899A8] '><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <div className='col-span-1 text-[#8899A8] hover:text-black'><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <div className='col-span-1 text-[#8899A8] hover:text-black'><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <div className='col-span-1 text-[#8899A8] hover:text-black'><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <Links name="Html, Css, Js" link="/learn/website/html"/>
-           <div className='col-span-1 text-[#8899A8] '><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <div className='col-span-1 text-[#8899A8] hover:text-black'><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <div className='col-span-1 text-[#8899A8] hover:text-black'><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-           <div className='col-span-1 text-[#8899A8] hover:text-black'><Link to={vals[0].DriveLink}>{vals[0].projectname}</Link></div>
-         </div>
-       )
-    }else if(splitLocation[1] === "proj")
-    {
-      return(<>Arun</>)
+
+        <div className='right-0 grid grid-cols-1  gap-2'>
+
+          {
+            vals.map((val) => (
+              <Link to={val.link}><div className={` p-2 pl-6 ml-8 rounded-lg col-span-1 ${splitLocation[3] === val.id ? "bg-[#000000] font-bold text-white" : "text-[#8899A8]"} hover:font-bold hover:text-white hover:bg-[#00c200]`} >{val.name}</div></Link>
+            ))
+          }
+
+        </div>
+      )
     }
-  
+    if (splitLocation[2] === "apps") {
+      return (
+
+        <div className='right-0 grid grid-cols-1  gap-2'>
+
+          {
+            learnapps.map((val) => (
+              <Link to={val.link}><div className={` p-2 pl-6 ml-8 rounded-lg col-span-1 ${splitLocation[3] === val.id ? "bg-[#000000] font-bold text-white" : "text-[#8899A8]"} hover:font-bold hover:text-white hover:bg-[#00c200]`} >{val.name}</div></Link>
+            ))
+          }
+
+        </div>
+      )
+    }
+  } else if (splitLocation[1] === "proj") {
+    return (
+      <div className='right-0 grid grid-cols-1  gap-2'>
+
+          {
+            vals.map((val, index) => (
+              <Link to={val.link}><div className={` p-2 pl-6 ml-8 rounded-lg col-span-1 ${splitLocation[3] === val.id ? "bg-[#000000] font-bold text-white" : "text-[#8899A8]"} hover:font-bold hover:text-white hover:bg-[#ff0000]`} >{val.name}</div></Link>
+            ))
+          }
+
+        </div>
+    )
+  }
+
 }
 
 export default Projects

@@ -7,6 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Projects from '../Projects';
 import Logo1 from '../../images/Brand1.png'
+import {vals,learnapps} from '../../Data' 
 function Links({ name, path }) {
   const location = useLocation();
 
@@ -17,46 +18,50 @@ function Links({ name, path }) {
   const splitLocation = pathname.split("/");
   const paths = path.split("/")
   return (
-    <Link to={path}><div className={`pb-2 pt-2 pl-4 ml-3 text-sm ${splitLocation[1] === paths[0] && splitLocation[2] === paths[1] ? "text-white bg-black font-bold rounded-md" : "text-[#5C6975]"}  border-black-600 hover:font-bold  hover:rounded-md hover:text-white hover:bg-black`}>{name}</div></Link>
+    <Link to={path}><div className={`pb-2 m-1 pt-2 pl-4 ml-3 text-[0.9rem]  ${splitLocation[1] === paths[0] && splitLocation[2] === paths[1] ? "text-white bg-black font-bold rounded-md" : "text-[#5C6975]"}  border-black-600 hover:font-bold  hover:rounded-md hover:text-white hover:bg-black`}>{name}</div></Link>
   )
 }
 function Header() {
-  const vals = [
-    {
-      name: "HTMl,CSS,JS",
-      projectname: "Basic Responsive Website",
-      DriveLink: "/learn/html",
-    },
-    {
-      name: "React",
-      projectname: "Basic Responsive Website Using HTML,CSS,JS",
-      DriveLink: "/indi/react"
-    },
-    {
-      name: "Flutter",
-      projectname: "Instagram Clone Using Flutter",
-      DriveLink: "/indi/flutter"
-    }
+  // const vals = [
+  //   {
+  //     id:"html",
+  //     name: "HTMl,CSS,JS",
+  //     link: "/learn/website/html",
+  //   },
+  //   {
+  //     id:"react",
+  //     name: "React",
+  //     projectname: "React JS",
+  //     link: "/learn/website/react"
+  //   },
+  //   {
+  //     id:"git",
+  //     name: "Git and Github",
+  //     projectname: "Git and Github",
+  //     link: "/learn/website/git"
+  //   },
+  //   {
+  //     id:"node",
+  //     name: "Node JS",
+  //     projectname: "Node JS",
+  //     link: "/learn/website/node"
+  //   },
+  //   {
+  //     id:"docker",
+  //     name: "Docker",
+  //     projectname: "Docker",
+  //     link: "/learn/website/docker"
+  //   },
+  //   {
+  //     id:"drf",
+  //     name: "Django DRF",
+  //     projectname: "Django DRF",
+  //     link: "/learn/website/drf"
+  //   }
 
-  ]
-  const vals1 = [
-    {
-      name: "HTMl,CSS,JS",
-      projectname: "Basic Responsive Website",
-      DriveLink: "/learn/html",
-    },
-    {
-      name: "React",
-      projectname: "Basic Responsive Website Using HTML,CSS,JS",
-      DriveLink: "/indi/react"
-    },
-    {
-      name: "Flutter",
-      projectname: "Instagram Clone Using Flutter",
-      DriveLink: "/indi/flutter"
-    }
+  // ]
 
-  ]
+  
   const [hamburger, sethamburger] = useState(false);
   const [hamburger2, sethamburger2] = useState(false);
   const location = useLocation();
@@ -76,7 +81,7 @@ function Header() {
           <Link to="/"><img src={Logo} className='w-[140px] lg:w-[210px] inline-block'></img></Link>
         </div>
         <br />
-        <div className='  relative pl-6 lg:pl-12'>
+        <div className='  relative pl-4 lg:pl-8'>
           <Link to='/'><div className={`p-2 pl-4 mb-2  ${splitLocation[1] === "" ? "text-white bg-black font-bold rounded-md" : "text-[#56585C]"}  hover:text-black rounded-md hover:text-white hover:bg-black hover:font-bold`}>Introduction</div></Link>
           <hr></hr>
           <div className="p-2 pl-4 text-sm text-[#8899A8]">SDC LAUNCHES</div>
@@ -84,20 +89,20 @@ function Header() {
           <Links name="LCS Forum" path="sdc/lcs" />
           <Links name="Placement Portal" path="sdc/placement" />
           <hr></hr>
-          <div className="pl-4 p-1 mt-2 text-sm text-[#8899A8]">PROJECTS</div>
+          <div className="pl-4 p-2 mt-2 text-sm text-[#8899A8]">PROJECTS</div>
           <Links name="Design" path="proj/design" />
           <Links name="Website" path="proj/website" />
           <Links name="Apps" path="proj/app" />
-          <div className="pl-4 p-1 mt-2 text-sm text-[#8899A8]">LEARNING</div>
+          <div className="pl-4 p-2 mt-2 text-sm text-[#8899A8]">LEARNING</div>
           <Links name="Design" path="learn/design" />
           <Links name="Website" path="learn/website" />
           <Links name="Apps" path="learn/apps" />
           <hr></hr>
-          <div className='pl-4 mt-2 p-1 text-sm text-[#8899A8] '>ABOUT</div>
+          <div className='pl-4 mt-2 p-2 text-sm text-[#8899A8] '>ABOUT</div>
           <Links name="Team" path="about/team" />
           <Links name="Contact" path="about/contact" />
           <hr></hr>
-          <div className='pl-4 mt-2 p-1 text-sm text-[#8899A8]'>SUGGESTIONS</div>
+          <div className='pl-4 mt-2 p-2 text-sm text-[#8899A8]'>SUGGESTIONS</div>
           <Links name="Feedback" path="suggest/feedback" />
           <Links name="Complaints" path="suggest/suggestions" />
         </div>
@@ -176,7 +181,7 @@ function Header() {
           data-aos-offset="400"
           data-aos-duration="4000">
           <div className='relative top-[13vh]'>
-          <Projects vals={vals} vals1 ={vals1}  />
+          <Projects vals={vals} learnapps={learnapps} />
           </div>
           </div>
         ) : (

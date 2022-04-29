@@ -28,46 +28,43 @@ import Proj from './Pages/Projects/Proj';
 import Design1 from './Pages/Projects/Design';
 import Website1 from './Pages/Projects/Website';
 import Apps1 from './Pages/Projects/Apps';
+import {vals,learnapps} from './Data'
 function App() {
-  const vals = [
-    {
-      id:"html",
-      name: "HTMl,CSS,JS",
-      projectname: "Basic Responsive Website",
-      DriveLink: "/learn/html",
-    },
-    {
-      id:"html1",
-      name: "React",
-      projectname: "Basic Responsive Website Using HTML,CSS,JS",
-      DriveLink: "/indi/react"
-    },
-    {
-      id:"html2",
-      name: "Flutter",
-      projectname: "Instagram Clone Using Flutter",
-      DriveLink: "/indi/flutter"
-    }
-
-  ]
-  // const vals1 = [
-  //   {
-  //     name: "HTMl,CSS,JS",
-  //     projectname: "Basic Responsive Website",
-  //     DriveLink: "/learn/html",
-  //   },
-  //   {
-  //     name: "Reac",
-  //     projectname: "Basic Responsive Website Using HTML,CSS,JS",
-  //     DriveLink: "/indi/react"
-  //   },
-  //   {
-  //     name: "Flutte",
-  //     projectname: "Instagram Clone Using Flutter",
-  //     DriveLink: "/indi/flutter"
-  //   }
-
-  // ]
+  
+  let item = ( <Routes>
+    <Route index element={<Intro />} />
+    <Route path="learn" element={<Learn/>}>
+      <Route path="design" element={<Design/>}/>
+      <Route path="website" element={<Website/>}/>
+      <Route path="apps" element={<Apps/>}/>
+      <Route path="design/:id" element={<ProjectsData data={vals} />} />
+      <Route path="website/:id" element={<ProjectsData data={vals} />} />
+      <Route path="apps/:id" element={<ProjectsData data={learnapps} />} />
+    </Route>
+    <Route path="proj" element={<Proj />}>
+    <Route path="design" element={<Design1/>}/>
+      <Route path="website" element={<Website1/>}/>
+      <Route path="apps" element={<Apps1/>}/>
+      <Route path="design/:id" element={<ProjectsData data={vals} />} />
+      <Route path="website/:id" element={<ProjectsData data={vals} />} />
+      <Route path="apps/:id" element={<ProjectsData data={vals} />}/>
+    </Route>
+    <Route path="sdc" element={<Navigate to="/sdc/elections"/>}>
+      <Route path="election" element={<ElectionsPortal/>} />
+      <Route path="lcs" element={<LCSForum/>} />
+      <Route path="placement" element={<PlacementPortal/>} />
+    </Route>
+    <Route path="about" element={<About/>}>
+      <Route path="team" element={<Team/>} />
+      <Route path="contact" element={<Contact/>} />
+    </Route>
+    <Route path="suggest" element={<Suggest />}>
+      <Route path="feedback" element={<Feedback/>} />
+      <Route path="suggestions" element={<Suggestions/>} />
+    </Route>
+    <Route path="*" element={<Team/>}/>
+  </Routes>
+  )
   return (
     <Router basename='/'>
       <div className='hidden md:flex md:flex-row'>
@@ -76,47 +73,15 @@ function App() {
         </div >
 
         <div className='flex-auto no-scrollbar lg:px-16 px-8 h-[100vh] overflow-y-scroll'>
-          <Routes>
-            <Route index element={<Intro />} />
-            <Route path="learn" element={<Learn/>}>
-              <Route path="design" element={<Design/>}/>
-              <Route path="website" element={<Website/>}/>
-              <Route path="apps" element={<Apps/>}/>
-              <Route path="design/:id" element={<ProjectsData data={vals} />} />
-              <Route path="website/:id" element={<ProjectsData data={vals} />} />
-              <Route path="app/:id" element={<ProjectsData data={vals} />} />
-            </Route>
-            <Route path="proj" element={<Proj />}>
-            <Route path="design" element={<Design1/>}/>
-              <Route path="website" element={<Website1/>}/>
-              <Route path="app" element={<Apps1/>}/>
-              <Route path="design/:id" element={<ProjectsData data={vals} />} />
-              <Route path="website/:id" element={<ProjectsData data={vals} />} />
-              <Route path="app/:id" element={<ProjectsData data={vals} />}/>
-            </Route>
-            <Route path="sdc" element={<Navigate to="/sdc/elections"/>}>
-              <Route path="election" element={<ElectionsPortal/>} />
-              <Route path="lcs" element={<LCSForum/>} />
-              <Route path="placement" element={<PlacementPortal/>} />
-            </Route>
-            <Route path="about" element={<About/>}>
-              <Route path="team" element={<Team/>} />
-              <Route path="contact" element={<Contact/>} />
-            </Route>
-            <Route path="suggest" element={<Suggest />}>
-              <Route path="feedback" element={<Feedback/>} />
-              <Route path="suggestions" element={<Suggestions/>} />
-            </Route>
-            <Route path="*" element={<Team/>}/>
-          </Routes>
+          {item}
         </div>
 
 
-        <div className='flex-4 cursor-pointer w-[200px] h-[100vh] overflow-y-scroll no-scrollbar  lg:min-w-[300px]'>
+        <div className='flex-4 border-l-2 cursor-pointer w-[200px] h-[100vh] overflow-y-scroll no-scrollbar  lg:min-w-[300px]'>
           <div className='text-center text-[#8899A8] hover:text-black border-y-2 p-4 m-10'>Search</div>
-          <Projects vals={vals}  />
+          <Projects vals={vals} learnapps={learnapps} />
         </div>
-      </div>
+      </div >
 
 
 
@@ -124,39 +89,7 @@ function App() {
       <div className='block md:hidden '>
           <Header />
         <div className=' md:relative no-scrollbar lg:px-16 px-8 h-[100vh] overflow-y-scroll'>
-          <Routes>
-          <Route index element={<Intro />} />
-            <Route path="learn" element={<Learn/>}>
-              <Route path="design" element={<Design/>}/>
-              <Route path="website" element={<Website/>}/>
-              <Route path="apps" element={<Apps/>}/>
-              <Route path="design/:id" element={<ProjectsData data={vals} />} />
-              <Route path="website/:id" element={<ProjectsData data={vals} />} />
-              <Route path="app/:id" element={<ProjectsData data={vals} />} />
-            </Route>
-            <Route path="proj" element={<Proj />}>
-            <Route path="design" element={<Design1/>}/>
-              <Route path="website" element={<Website1/>}/>
-              <Route path="app" element={<Apps1/>}/>
-              <Route path="design/:id" element={<ProjectsData data={vals} />} />
-              <Route path="website/:id" element={<ProjectsData data={vals} />} />
-              <Route path="app/:id" element={<ProjectsData data={vals} />}/>
-            </Route>
-            <Route path="sdc" element={<Navigate to="/sdc/elections"/>}>
-              <Route path="election" element={<ElectionsPortal/>} />
-              <Route path="lcs" element={<LCSForum/>} />
-              <Route path="placement" element={<PlacementPortal/>} />
-            </Route>
-            <Route path="about" element={<About/>}>
-              <Route path="team" element={<Team/>} />
-              <Route path="contact" element={<Contact/>} />
-            </Route>
-            <Route path="suggest" element={<Suggest />}>
-              <Route path="feedback" element={<Feedback/>} />
-              <Route path="suggestions" element={<Suggestions/>} />
-            </Route>
-            <Route path="*" element={<Team/>}/>
-          </Routes>
+         {item}
         </div>
       </div>
     </Router>
