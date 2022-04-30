@@ -29,6 +29,7 @@ import Design1 from './Pages/Projects/Design';
 import Website1 from './Pages/Projects/Website';
 import Apps1 from './Pages/Projects/Apps';
 import {vals,learnapps, learndesign,webprojects,appprojects,desginprojects} from './Data' 
+import SDC from './Pages/SDCLaunces/SDC';
 function App() {
   
   let item = ( <Routes>
@@ -49,7 +50,7 @@ function App() {
       <Route path="website/:id" element={<ProjectsData data={webprojects} />} />
       <Route path="apps/:id" element={<ProjectsData data={appprojects} />}/>
     </Route>
-    <Route path="sdc" element={<Navigate to="/sdc/elections"/>}>
+    <Route path="sdc" element={<SDC/>}>
       <Route path="election" element={<ElectionsPortal/>} />
       <Route path="lcs" element={<LCSForum/>} />
       <Route path="placement" element={<PlacementPortal/>} />
