@@ -28,7 +28,7 @@ import Proj from './Pages/Projects/Proj';
 import Design1 from './Pages/Projects/Design';
 import Website1 from './Pages/Projects/Website';
 import Apps1 from './Pages/Projects/Apps';
-import {vals,learnapps} from './Data'
+import {vals,learnapps, learndesign,webprojects,appprojects,desginprojects} from './Data' 
 function App() {
   
   let item = ( <Routes>
@@ -37,7 +37,7 @@ function App() {
       <Route path="design" element={<Design/>}/>
       <Route path="website" element={<Website/>}/>
       <Route path="apps" element={<Apps/>}/>
-      <Route path="design/:id" element={<ProjectsData data={vals} />} />
+      <Route path="design/:id" element={<ProjectsData data={learndesign} />} />
       <Route path="website/:id" element={<ProjectsData data={vals} />} />
       <Route path="apps/:id" element={<ProjectsData data={learnapps} />} />
     </Route>
@@ -45,9 +45,9 @@ function App() {
     <Route path="design" element={<Design1/>}/>
       <Route path="website" element={<Website1/>}/>
       <Route path="apps" element={<Apps1/>}/>
-      <Route path="design/:id" element={<ProjectsData data={vals} />} />
-      <Route path="website/:id" element={<ProjectsData data={vals} />} />
-      <Route path="apps/:id" element={<ProjectsData data={vals} />}/>
+      <Route path="design/:id" element={<ProjectsData data={desginprojects} />} />
+      <Route path="website/:id" element={<ProjectsData data={webprojects} />} />
+      <Route path="apps/:id" element={<ProjectsData data={appprojects} />}/>
     </Route>
     <Route path="sdc" element={<Navigate to="/sdc/elections"/>}>
       <Route path="election" element={<ElectionsPortal/>} />
@@ -67,7 +67,7 @@ function App() {
   )
   return (
     <Router basename='/'>
-      <div className='hidden md:flex md:flex-row'>
+      <div className='hidden lg:flex lg:flex-row'>
         <div className='flex-none h-[100vh] '>
           <Header />
         </div >
@@ -77,16 +77,15 @@ function App() {
         </div>
 
 
-        <div className='flex-4 border-l-2 cursor-pointer w-[200px] h-[100vh] overflow-y-scroll no-scrollbar  lg:min-w-[300px]'>
-          <div className='text-center text-[#8899A8] hover:text-black border-y-2 p-4 m-10'>Search</div>
-          <Projects vals={vals} learnapps={learnapps} />
+        <div className='flex-4 border-l-2 cursor-pointer w-[300px] h-[100vh] overflow-y-scroll no-scrollbar  lg:min-w-[300px]'>
+        <Projects vals={vals} learnapps={learnapps} learndesign={learndesign} webprojects={webprojects} approjects={appprojects} designprojects={desginprojects} />
         </div>
       </div >
 
 
 
       {/* Mobile version */}
-      <div className='block md:hidden '>
+      <div className='block lg:hidden '>
           <Header />
         <div className=' md:relative no-scrollbar lg:px-16 px-8 h-[100vh] overflow-y-scroll'>
          {item}

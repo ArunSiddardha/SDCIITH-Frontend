@@ -3,6 +3,8 @@ export const vals = [
       id:"html",
       name: "HTMl ,CSS ,JS",
       link: "/learn/website/html",
+      DriveLink:"This is the drive link",
+      description:"hello hello",
     },
     {
         id:"git",
@@ -69,3 +71,29 @@ export const vals = [
         link: "/learn/apps/android"
       },
   ]
+  export const learndesign=[
+      {
+
+      },
+      {
+
+      },
+      {
+
+      }
+  ]
+  export const webprojects=[
+      {
+
+      },
+      {
+
+      },
+  ]
+  export const appprojects=[
+
+  ]
+  export const desginprojects=[
+
+  ]
+  
