@@ -73,14 +73,12 @@ export const vals = [
   ]
   export const learndesign=[
       {
-
+        id:"uiux",
+        name: "UI / UX",
+        projectname: "UI/UX",
+        link: "/learn/design/uiux"
       },
-      {
-
-      },
-      {
-
-      }
+     
   ]
   export const webprojects=[
       {

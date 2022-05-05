@@ -13,7 +13,12 @@ function Team() {
     </ul>
     <hr/>
     <div className='text-2xl lg:text-3xl text-[#3B454E] font-bold my-5'>Team Structure</div>
-    The SDC team is divided into three councils 
+    The SDC team is divided into two parts 
+    <ul className='list-disc m-4'>
+      <li>Cheif Members</li>
+      <li>Supporting memebers</li>
+    </ul>
+    And it has three councils 
     <ul className='list-disc m-4'>
       <li>Web Council</li>
       <li>App Council</li>

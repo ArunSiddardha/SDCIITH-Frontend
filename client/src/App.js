@@ -61,7 +61,7 @@ function App() {
     </Route>
     <Route path="suggest" element={<Suggest />}>
       <Route path="feedback" element={<Feedback/>} />
-      <Route path="suggestions" element={<Suggestions/>} />
+      <Route path="ideas" element={<Suggestions/>} />
     </Route>
     <Route path="*" element={<Team/>}/>
   </Routes>

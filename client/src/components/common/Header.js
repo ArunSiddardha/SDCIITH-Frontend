@@ -99,12 +99,12 @@ function Header() {
           <Links name="Apps" path="learn/apps" />
           <hr></hr>
           <div className='pl-4 mt-2 p-2 text-sm text-[#8899A8] '>ABOUT</div>
-          <Links name="Team" path="about/team" />
+          <Links name="Team Structure" path="about/team" />
           <Links name="Contact" path="about/contact" />
           <hr></hr>
           <div className='pl-4 mt-2 p-2 text-sm text-[#8899A8]'>SUGGESTIONS</div>
           <Links name="Feedback" path="suggest/feedback" />
-          <Links name="Complaints" path="suggest/suggestions" />
+          <Links name="Ideas" path="suggest/ideas" />
         </div>
       </div>
       {/* mobile version */}
@@ -166,12 +166,12 @@ function Header() {
           <Links name="Apps" path="leanr/apps" />
           <hr></hr>
           <div className='pl-4 mt-2 p-1 text-sm text-[#8899A8] '>ABOUT</div>
-          <Links name="Team" path="about/team" />
+          <Links name="Team Structure" path="about/team" />
           <Links name="Contact" path="about/contact" />
           <hr></hr>
           <div className='pl-4 mt-2 p-1 text-sm text-[#8899A8]'>SUGGESTIONS</div>
           <Links name="Feedback" path="suggest/feedback" />
-          <Links name="Complaints" path="suggest/complaints" />
+          <Links name="Ideas" path="suggest/Ideas" />
         </div>
           </div>
         ) : (
