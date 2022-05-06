@@ -39,7 +39,7 @@ function Suggestions() {
        <div className=" lg:text-5xl text-2xl border-b-4  text-[#3B454E] h-fit cursor-pointer py-5 mb-5 mt-2 md:my-5 font-bold ">
             Suggest Ideas
           </div>
-          As we are a growing community we are highly open to suggestions and project ideas.
+          <span className='text-lg  text-[#3B454E] '>As we are a growing community we are highly open to suggestions and project ideas.</span>
           <form
             ref={form}
             onSubmit={sendEmail}

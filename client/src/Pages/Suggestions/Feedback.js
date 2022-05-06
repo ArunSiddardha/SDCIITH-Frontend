@@ -39,7 +39,7 @@ function Feedback() {
        <div className=" lg:text-5xl text-2xl border-b-4  text-[#3B454E] h-fit cursor-pointer py-5 mb-5 mt-2 md:my-5 font-bold ">
             Feedback
           </div>
-          As we are a growing community we are highly open to Feedback.
+          <span className='text-lg'>As we are a growing community we are highly open to Feedback.</span>
           <form
             ref={form}
             onSubmit={sendEmail}
