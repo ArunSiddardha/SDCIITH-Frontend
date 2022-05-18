@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react'
-import Logo from '../../images/Brand.png'
+import Logo from '../../images/brand12.png'
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import style from '../../css/hamburger.module.css'
@@ -84,19 +84,20 @@ function Header() {
         <div className='  relative pl-4 lg:pl-8'>
           <Link to='/'><div className={`p-2 pl-4 mb-2  ${splitLocation[1] === "" ? "text-white bg-black font-bold rounded-md" : "text-[#56585C]"}  hover:text-white rounded-md hover:text-white hover:bg-black hover:font-bold`}>Introduction</div></Link>
           <hr></hr>
-          <div className="p-2 pl-4 text-sm text-[#8899A8]">SDC LAUNCHES</div>
+          <div className="p-2 pl-4 text-sm text-[#8899A8]">SDC PROJECTS</div>
           <Links name="Elections Portal" path="sdc/election" />
           <Links name="LCS Forum" path="sdc/lcs" />
           <Links name="Placement Portal" path="sdc/placement" />
+          <Links name="10 More Coming soon...." path="#"></Links>
           <hr></hr>
           <div className="pl-4 p-2 mt-2 text-sm text-[#8899A8]">PROJECTS</div>
           <Links name="Design" path="proj/design" />
-          <Links name="Website" path="proj/website" />
-          <Links name="Apps" path="proj/app" />
+          <Links name="Web Dev" path="proj/website" />
+          <Links name="App dev" path="proj/app" />
           <div className="pl-4 p-2 mt-2 text-sm text-[#8899A8]">LEARNING</div>
           <Links name="Design" path="learn/design" />
-          <Links name="Website" path="learn/website" />
-          <Links name="Apps" path="learn/apps" />
+          <Links name="Web Dev" path="learn/website" />
+          <Links name="App Dev" path="learn/apps" />
           <hr></hr>
           <div className='pl-4 mt-2 p-2 text-sm text-[#8899A8] '>ABOUT</div>
           <Links name="Team Structure" path="about/team" />
@@ -106,6 +107,7 @@ function Header() {
           <Links name="Feedback" path="suggest/feedback" />
           <Links name="Ideas" path="suggest/ideas" />
         </div>
+        <div className='h-[10vh]'></div>
       </div>
       {/* mobile version */}
       <div className='block lg:hidden bg-[#F5F7F9]'  >
@@ -158,12 +160,12 @@ function Header() {
           <hr></hr>
           <div className="pl-4 p-1 mt-2 text-sm text-[#8899A8]">PROJECTS</div>
           <Links name="Design" path="proj/design" />
-          <Links name="Website" path="proj/website" />
-          <Links name="Apps" path="proj/app" />
+          <Links name="Web Dev" path="proj/website" />
+          <Links name="App Dev" path="proj/apps" />
           <div className="pl-4 p-1 mt-2 text-sm text-[#8899A8]">LEARNING</div>
           <Links name="Design" path="learn/design" />
-          <Links name="Website" path="learn/website" />
-          <Links name="Apps" path="leanr/apps" />
+          <Links name="Web Dev" path="learn/website" />
+          <Links name="App Dev" path="learn/apps" />
           <hr></hr>
           <div className='pl-4 mt-2 p-1 text-sm text-[#8899A8] '>ABOUT</div>
           <Links name="Team Structure" path="about/team" />
@@ -172,6 +174,7 @@ function Header() {
           <div className='pl-4 mt-2 p-1 text-sm text-[#8899A8]'>SUGGESTIONS</div>
           <Links name="Feedback" path="suggest/feedback" />
           <Links name="Ideas" path="suggest/Ideas" />
+          <div className='h-[10vh]'></div>
         </div>
           </div>
         ) : (

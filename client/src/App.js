@@ -30,6 +30,7 @@ import Website1 from './Pages/Projects/Website';
 import Apps1 from './Pages/Projects/Apps';
 import {vals,learnapps, learndesign,webprojects,appprojects,desginprojects} from './Data' 
 import SDC from './Pages/SDCLaunces/SDC';
+import Sidebar from './components/common/Sidebar';
 function App() {
   
   let item = ( <Routes>
@@ -45,7 +46,7 @@ function App() {
     <Route path="proj" element={<Proj />}>
     <Route path="design" element={<Design1/>}/>
       <Route path="website" element={<Website1/>}/>
-      <Route path="apps" element={<Apps1/>}/>
+      <Route path="app" element={<Apps1/>}/>
       <Route path="design/:id" element={<ProjectsData data={desginprojects} />} />
       <Route path="website/:id" element={<ProjectsData data={webprojects} />} />
       <Route path="apps/:id" element={<ProjectsData data={appprojects} />}/>
@@ -71,10 +72,14 @@ function App() {
       <div className='hidden lg:flex lg:flex-row'>
         <div className='flex-none h-[100vh] '>
           <Header />
+
         </div >
 
         <div className='flex-auto no-scrollbar lg:px-16 px-8 h-[100vh] overflow-y-scroll'>
           {item}
+          <div>
+            <Sidebar/>
+          </div>
         </div>
 
 
@@ -90,6 +95,7 @@ function App() {
           <Header />
         <div className=' md:relative no-scrollbar lg:px-16 px-8 h-[100vh] overflow-y-scroll'>
          {item}
+         <Sidebar/>
         </div>
       </div>
     </Router>
