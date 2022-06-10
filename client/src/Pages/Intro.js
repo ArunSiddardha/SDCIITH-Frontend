@@ -16,7 +16,7 @@ function Intro() {
 </div>
 <ul className='text-md md:text-lg text-[#3B454E]'>
   <li className='m-2 '>
-    <strong>Skill enhancement:</strong> We will be organising certified workshops and much more to help you learn a new skill or improve an existing one by providing you with the correct mentoring and well documented resources.
+    <strong>Skill enhancement:</strong> We will be organising certified workshops and much more to help you learn a new skill or improve an existing one by providing you with the correct mentoring and well documented resources.And we will be also mentoring your own persnol dev project which might be an extension, bot any other thing.
   </li>
   <li className='m-2'>
   <strong>Meetups:</strong> We'll conduct meetups with a great community of developers and aspiring developers in campus to discuss ideas for the products to work on with and learn about best practises in the development world. 
@@ -43,7 +43,7 @@ function Intro() {
       </ul>
       <div className='text-2xl lg:text-3xl text-[#3B454E] font-bold my-5'>How are we different from Lambda (Dev club of IITH)?</div>
       <ul className='text-md md:text-lg text-[#3B454E] text-[#3B454E]'>
-      Lambda is an IITH development club that focuses on educating students how to grow and instilling a development culture in them. And their main responsibilities include running sessions, hackathons, hosting events for Milan and Elan, and leading seminars. And how are we different here? Our major objective is to create goods that will be used by the IITH campus community and administration, and that are in high demand (You can see our projects beside). And our key goal is to have a more flexible staff with the greatest designers, with the utmost attention paid to the UI and UX so that the app is usable.We will construct them as quickly as possible and to a fixed timetable, as this is our primary task. And we're working hard to establish a culture because we've seen how hard our clubs failed these days to generate a culture. However, our main job is to make Products(which is the official differentiation).
+      Lambda is an IITH development club that focuses on educating students how to grow and instilling a development culture in them. And their main responsibilities include running sessions, hackathons, hosting events for Milan and Elan, and leading seminars. And how are we different here? Our major objective is to create goods that will be used by the IITH campus community and administration, and that are in high demand (You can see our projects beside). And our key goal is to have a more flexible staff with the greatest designers, with the utmost attention paid to the UI and UX so that the app is usable.We will construct them as quickly as possible and to a fixed timetable, as this is our primary task. Our main job is to make Products(which is the official differentiation).
       </ul>
       <div className='text-2xl lg:text-3xl text-[#3B454E] font-bold my-5'>Why do we do the things we do?</div>
       <ul className='text-md md:text-lg text-[#3B454E] text-[#3B454E]'>

@@ -94,7 +94,7 @@ function Header() {
           <Links name="Design" path="proj/design" />
           <Links name="Web Dev" path="proj/website" />
           <Links name="App dev" path="proj/app" />
-          <div className="pl-4 p-2 mt-2 text-sm text-[#8899A8]">LEARNING</div>
+          <div className="pl-4 p-2 mt-2 text-sm text-[#8899A8]">LEARNING RESOURCES</div>
           <Links name="Design" path="learn/design" />
           <Links name="Web Dev" path="learn/website" />
           <Links name="App Dev" path="learn/apps" />
