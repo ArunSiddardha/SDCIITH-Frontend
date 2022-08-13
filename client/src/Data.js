@@ -3,20 +3,22 @@ export const vals = [
       id:"html",
       name: "HTMl ,CSS ,JS",
       link: "/learn/website/html",
-      DriveLink:"This is the drive link",
+      DriveLink:"https://drive.google.com/file/d/19kAcSGU43NSyXRov6s1svu9xZ6FlGWFW/preview",
       description:"hello hello",
     },
     {
         id:"git",
         name: "Git and Github",
         projectname: "Git and Github",
-        link: "/learn/website/git"
-      },
+        link: "/learn/website/git",
+        //DriveLink:"https://drive.google.com/file/d/19kAcSGU43NSyXRov6s1svu9xZ6FlGWFW/view?usp=sharing",
+    },
     {
       id:"react",
       name: "React",
       projectname: "React JS",
-      link: "/learn/website/react"
+      link: "/learn/website/react",
+        DriveLink:"https://drive.google.com/file/d/1cxoMjVsMXqmS8oPvlMBMkz6oDQmhvRvm/preview",
     },
   
     {
@@ -24,6 +26,8 @@ export const vals = [
       name: "Node JS",
       projectname: "Node JS",
       link: "/learn/website/node"
+      ,
+        // DriveLink:"https://drive.google.com/file/d/19kAcSGU43NSyXRov6s1svu9xZ6FlGWFW/view?usp=sharing",
     },
    
     {
@@ -31,24 +35,32 @@ export const vals = [
       name: "Django DRF",
       projectname: "Django DRF",
       link: "/learn/website/drf"
+      ,
+        // DriveLink:"https://drive.google.com/file/d/19kAcSGU43NSyXRov6s1svu9xZ6FlGWFW/view?usp=sharing",
     },
     {
      id:"go",
       name: "Golang",
       projectname: "Golang",
       link: "/learn/website/go"
+      ,
+        // DriveLink:"https://drive.google.com/file/d/19kAcSGU43NSyXRov6s1svu9xZ6FlGWFW/view?usp=sharing",
     },
     {
         id:"docker",
         name: "Docker",
         projectname: "Docker",
         link: "/learn/website/docker"
+        ,
+        // DriveLink:"https://drive.google.com/file/d/19kAcSGU43NSyXRov6s1svu9xZ6FlGWFW/view?usp=sharing",
       },
     {
         id:"host",
          name: "Hosting",
          projectname: "Hosting",
          link: "/learn/website/host"
+         ,
+        // DriveLink:"https://drive.google.com/file/d/19kAcSGU43NSyXRov6s1svu9xZ6FlGWFW/view?usp=sharing",
        }
 
   ]

@@ -68,7 +68,7 @@ function Intro() {
         <div className='flex items-center justify-center font-[900] cursor-pointer text-[1.2rem] text-white hover:bg-[#3B454E]  h-[70px] rounded-lg hover:border-2 p-3 md:p-0  hover:border-black bg-[#7289da] m-2 lg:m-4'>
           Join Discord
         </div></a>
-      {/* <iframe src={link} title="1" className='w-5/6 h-[50vh] mx-auto lg:h-[120vh]' allow="autoplay"></iframe> */}
+      
 
     </div>
 
