@@ -8,7 +8,7 @@ function Intro() {
       <div className='lg:text-5xl text-3xl border-b-4  text-[#3B454E] h-fit cursor-pointer py-5 mb-5 mt-2 md:my-8 font-bold'>Welcome to the SDC</div>
       <div className='text-2xl lg:text-3xl text-[#3B454E] font-bold my-5 '>Introduction to SDC</div>
       <ul className='text-md md:text-lg text-[#3B454E]'>
-      Hello and welcome to the SDC. We are a team of developers who work around the clock to create, build, launch, and manage websites, apps, and products. Here, we provide students with hands-on experience in product design, development, and management. By providing appropriate mentoring and relevant resources for the same. We make our products which are in need for institute, clubs, informal Groups, and fests.
+      Hello and welcome to the SDC. We are a team of developers who work around the clock to build things.
       </ul>
      
   
